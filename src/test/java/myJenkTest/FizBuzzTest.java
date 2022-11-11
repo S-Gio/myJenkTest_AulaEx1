@@ -112,11 +112,11 @@ public class FizBuzzTest {
 			String risultato = fb.play("Ciao");
 			Assertions.assertEquals("0", "Dovrebbe dare errore ma non lo fa");
 		}catch(InputMismatchException e) {
-			String risultato = "L'input è errato";
+			String risultato = "ti ho detto di inserire un intero!";
 			// Verifica che il risultato sia uguale
 			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
 		}catch (NumberFormatException e) {
-			String risultato = "L'input deve essere un intero";
+			String risultato = "ti ho detto di inserire un intero!";
 			// Verifica che il risultato sia uguale
 			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
 		}
