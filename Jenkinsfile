@@ -22,13 +22,16 @@ pipeline {
 	post {
 	        always {
 	            echo 'Test run completed'
-	            slackSend message: 'Success'
+	            slackSend message: 'Finish !!!!'
 	        }
 	        success {
 	            echo 'Successfully!'
+	           	slackSend message: 'Success'
+	            
 	        }
 	        failure {
 	            echo 'Failed!'
+	            slackSend message: 'Fail execution'
 	        }
 	        unstable {
 	            echo 'This will run only if the run was marked as unstable'

@@ -105,7 +105,23 @@ public class FizBuzzTest {
 		
 	}
 	*/
-	
+	@DisplayName("Play FizzBuzz with string = Ciao")
+	@Test
+	public void testStringCiao() {
+		try {
+			String risultato = fb.play("Ciao");
+			Assertions.assertEquals("0", "Dovrebbe dare errore ma non lo fa");
+		}catch(InputMismatchException e) {
+			String risultato = "L'input è errato";
+			// Verifica che il risultato sia uguale
+			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
+		}catch (NumberFormatException e) {
+			String risultato = "L'input deve essere un intero";
+			// Verifica che il risultato sia uguale
+			Assertions.assertEquals(risultato, "ti ho detto di inserire un intero!");
+		}
+		
+	}
 	
 	
 
