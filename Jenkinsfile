@@ -22,6 +22,7 @@ pipeline {
 	post {
 	        always {
 	            echo 'Test run completed'
+	            slackSend message: 'Success'
 	        }
 	        success {
 	            echo 'Successfully!'
