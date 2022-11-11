@@ -23,6 +23,14 @@ pipeline {
 	        always {
 	            echo 'Test run completed'
 	            slackSend message: 'Finish !!!!'
+	            publishHTML (target : [allowMissing: false,
+							 alwaysLinkToLastBuild: true,
+							 keepAll: true,
+							 reportDir: 'reports',
+							 reportFiles: 'myreport.html',
+							 reportName: 'My Reports',
+							 reportTitles: 'The Report']
+							 )
 	        }
 	        success {
 	            echo 'Successfully!'
